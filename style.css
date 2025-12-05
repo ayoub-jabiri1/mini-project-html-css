@@ -2,7 +2,7 @@
 :root {
     --gradient-color: linear-gradient(#2477aa 0%, #6461e0 100%);
     --main-color: #6461e0;
-    --secondary-color: #1f4272;
+    --secondary-color: #1b2250;
     --paragraph-color: #333;
     --main-section-padding: 80px;
 }
@@ -304,5 +304,56 @@ header {
                 width: 300px;
             }
         }
+    }
+}
+
+footer {
+    background-color: var(--secondary-color);
+    margin-top: 80px;
+    padding-top: var(--main-section-padding);
+    padding-bottom: var(--main-section-padding);
+    .holder {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 767px) {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+        }
+        .box {
+            width: 150px;
+            h2 {
+                color: #fff;
+                font-size: 15px;
+                margin-bottom: 10px;
+            }
+            a {
+                display: block;
+                color: #ddd;
+                font-size: 13px;
+                &:not(:last-child) {
+                    margin-bottom: 5px;
+                }
+            }
+            .social-links {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                @media (max-width: 767px) {
+                    justify-content: center;
+                }
+                img {
+                    width: 20px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .copy-right {
+        color: #9e9e9e;
+        font-size: 14px;
+        margin-top: 30px;
+        text-align: center;
     }
 }
